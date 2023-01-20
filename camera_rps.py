@@ -101,7 +101,7 @@ def play():
     rounds_played = 0
     computer_wins = 0
     user_wins = 0
-    while rounds_played < 5 and user_wins < 3 and computer_wins < 3:
+    while rounds_played < 5: # and user_wins < 3 and computer_wins < 3:
         computer_choice = get_computer_choice()
         user_choice = get_user_choice()
     #    print(f"Computer: {computer_choice} User: {user_choice}")
