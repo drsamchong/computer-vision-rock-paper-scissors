@@ -22,3 +22,7 @@ while True:
 cap.release()
 # Destroy all the windows
 cv2.destroyAllWindows()
+
+#choice = np.argmax(prediction[0])
+#categories = ["Rock", "Paper", "Scissors", "None"]
+#print(f"model thinks it is {choice}: {categories[choice]}")
