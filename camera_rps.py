@@ -102,15 +102,22 @@ def play():
     computer_wins = 0
     user_wins = 0
     while rounds_played != 5: # and user_wins < 3 and computer_wins < 3:
-        computer_choice = get_computer_choice()
-        user_choice = get_user_choice()
-    #    print(f"Computer: {computer_choice} User: {user_choice}")
-        winner = get_winner(computer_choice, user_choice)
-        if winner =="user":
-            user_wins += 1
-        elif winner == "computer":
-            computer_wins += 1
-        rounds_played += 1
-
+        if computer_wins == 3:
+            print("Computer wins")
+            break
+        elif user_wins == 3:
+            print("User wins")
+            break
+        else:
+            computer_choice = get_computer_choice()
+            user_choice = get_user_choice()
+        #    print(f"Computer: {computer_choice} User: {user_choice}")
+            winner = get_winner(computer_choice, user_choice)
+            if winner =="user":
+                user_wins += 1
+            elif winner == "computer":
+                computer_wins += 1
+            rounds_played += 1
+            print(f"Computer wins: {computer_wins}. User wins: {user_wins}. Rounds played: {rounds_played}")
 
 play()   
