@@ -29,3 +29,17 @@ A python script containing code for the game's basic mechanics was added, implem
 - `get_user_choice`   asks user to input their choice
 - `get_winner`    uses if/elif/else to implement logic of deciding which player wins
 - `play`  wraps calls to the previous functions to represent a game of RPS
+
+
+## Milestone 5
+
+The base code was moved to a new python file to include the functions written previously and a new function `get_prediction` to extract the user's choice as determined by the keras CV model, which could then be passed to `get_winner` to determine who won the game.
+
+A countdown was added to enable the user to prepare for the image being captured via video. Initially, this was displayed in the terminal, and then on the video capture window to improve the user experience.
+![RPS capture countdown](images/video_capture_countdown.png)
+![RPS class model prediction](images/video_capture_class.png)
+
+Within the `play` function, code was added to implement a 'best of five' game.
+
+In addition to updating the code, the model was also retrained. The initial model was able to reliably predict "Rock", but performed less well for "Paper" and almost invariably classified "Scissors" as "Nothing". The model was retrained on approximately 2000 images for each category (cf. 500 for the initial model) to include different lighting conditions, and the iamges were flipped to match the orientation that was captured from the camera during the RPS game. The code was modified to apply a crop to approximately match the area captured on the Teachable Machine website and the aspect ratio. The training hyperparameters were changed to use 75 training epochs (vs. 50 for the original model). Inference was hugely improved with the updated model.
+
