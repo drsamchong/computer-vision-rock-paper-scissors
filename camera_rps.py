@@ -25,7 +25,7 @@ def capture_user_choice():
             font = cv2.FONT_HERSHEY_SIMPLEX
             cv2.putText(crop, str(countdown), (480, 480), font, 10, (255, 0 , 255), 4, cv2.LINE_AA)
             cv2.imshow('crop', crop)
-            cv2.waitKey(100)
+            cv2.waitKey(10)
             time_now = time.time()
 
             if time_now - start_time >= 1:
@@ -137,4 +137,7 @@ def play():
             rounds_played += 1
             print(f"Computer wins: {computer_wins}. User wins: {user_wins}. Rounds played: {rounds_played}")
 
-play()   
+play()
+
+# TODO
+# OOP
