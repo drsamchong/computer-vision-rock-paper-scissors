@@ -42,4 +42,3 @@ A countdown was added to enable the user to prepare for the image being captured
 Within the `play` function, code was added to implement a 'best of five' game.
 
 In addition to updating the code, the model was also retrained. The initial model was able to reliably predict "Rock", but performed less well for "Paper" and almost invariably classified "Scissors" as "Nothing". The model was retrained on approximately 2000 images for each category (cf. 500 for the initial model) to include different lighting conditions, and the iamges were flipped to match the orientation that was captured from the camera during the RPS game. The code was modified to apply a crop to approximately match the area captured on the Teachable Machine website and the aspect ratio. The training hyperparameters were changed to use 75 training epochs (vs. 50 for the original model). Inference was hugely improved with the updated model.
-
