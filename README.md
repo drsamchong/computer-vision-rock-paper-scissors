@@ -13,7 +13,7 @@ The first project milestone involved setting up the environment for the project.
 
 ## Milestone 3
 
-To enable the use of Tensorflow on an M1 Mac required installing [miniforge](https://github.com/conda-forge/miniforge) rather than miniconda or full Anaconda. Acknowledgments go to [this Medium post](https://www.mrdbourke.com/setup-apple-m1-pro-and-m1-max-for-machine-learning-and-data-science/) and one of my super-helpful peers at AiCore for pointing me to it (sorry, I don't remember who!). The project uses conda to manage the specific virtual environment into which tensorflow and its dependencies are installed.
+To enable the use of Tensorflow on an M1 Mac required installing [miniforge](https://github.com/conda-forge/miniforge) rather than miniconda or full Anaconda. Acknowledgments go to [this Medium post](https://www.mrdbourke.com/setup-apple-m1-pro-and-m1-max-for-machine-learning-and-data-science/) and one of my super-helpful peers for pointing me to it (sorry, I don't remember who!). The project uses conda to manage the specific virtual environment into which tensorflow and its dependencies are installed.
 
 A code template was added to check that the model was functional - it captures and processes images from a computer's webcam and uses the keras model to categorise whether the image contains R/P/S/n (Rock/Paper/Scicors/none). 
 
